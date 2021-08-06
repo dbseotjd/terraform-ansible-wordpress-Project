@@ -1,0 +1,6 @@
+tf_ansible_roles_one_instance/.terraform.lock.hcl
+tf_ansible_roles_one_instance/.terraform
+tf_ansible_roles_one_instance/my_sshkey
+tf_ansible_roles_one_instance/my_sshkey.pub
+tf_ansible_roles_one_instance/terraform.tfstate
+tf_ansible_roles_one_instance/terraform.tfstate.backup

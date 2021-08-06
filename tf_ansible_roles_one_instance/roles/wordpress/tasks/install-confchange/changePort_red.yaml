@@ -1,0 +1,7 @@
+- name: Change Service port in Redhat
+  template:
+    src: httpd.conf.j2
+    dest: /etc/httpd/conf/httpd.conf
+    force: yes
+  notify:
+  - Restart httpd for Redhat Distribution

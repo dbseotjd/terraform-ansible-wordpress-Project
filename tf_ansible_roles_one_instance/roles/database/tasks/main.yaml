@@ -1,0 +1,7 @@
+- name: Install, configure and running DataBase Debian
+  import_tasks: Debian/install_debian.yaml
+  when: ansible_facts['os_family'] == "Debian"
+
+- name: Install, configure and running DataBase RedHat
+  import_tasks: RedHat/install_redhat.yaml
+  when: ansible_facts['os_family'] == "RedHat"

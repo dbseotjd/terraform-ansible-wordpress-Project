@@ -1,0 +1,8 @@
+- name: Mysql Service Restart
+  service:
+    name: mysql
+    state: restarted
+- name: Mysqld Service Restart
+  service:
+    name: mysqld
+    satte: restarted

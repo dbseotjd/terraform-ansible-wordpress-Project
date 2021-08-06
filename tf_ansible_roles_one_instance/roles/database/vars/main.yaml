@@ -1,0 +1,8 @@
+db:
+  socket_path: /var/run/mysqld/mysqld.sock
+  socket_path_Redhat: /var/lib/mysql/mysql.sock
+  db_user_root_pw: wordpress
+  db_user_wp: wordpress
+  db_user_wp_pw: wordpress
+  db_name: wordpress
+  conf_path: /etc/mysql/mysql.conf.d/mysqld.cnf

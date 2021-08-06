@@ -1,0 +1,27 @@
+- name: Install pymysql mysql-server package Redhat
+  yum:
+    updata_cache: yes
+    name: python3-pymysql, mysql-server
+    state: present
+- name: Mysql root user config
+  mysql_user:
+    check_implicit_admin: yes
+    login_unix_socket: "{{ db['socket_path_Redhat'] }}"
+    login_user: root
+    login_password: ''
+    name: root
+    password: "{{ db['db_user_root_pw'] }}"
+- name: Mysql wordpress user create
+  mysql_user:
+    login_user: root
+    login_password: "{{ db['db_user_root_pw'] }}"
+    name: "{{ db['db_user_wp'] }}"
+    password: "{{ db['db_user_wp_pw'] }}"
+    host: "{{ private_ip }}"
+    priv: "{{ db['db_user_wp'] }}.*:ALL,GRANT"
+- name: Mysql database create
+  mysql_db:
+    login_user: root
+    login_password: "{{ db['db_user_root_pw'] }}"
+    name: "{{ db['db_name'] }}"
+  notify: Mysqld Service Restart

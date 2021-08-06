@@ -1,0 +1,12 @@
+wp:
+  wp_sampleconf_php: /var/www/html/wordpress/wp-config-sample.php
+  wp_conf_php: /var/www/html/wordpress/wp-config.php
+  version: 5.8
+db:
+  db_host: "{{ private_ip }}"
+  db_user_root_pw: wordpress
+  db_user_wp: wordpress
+  db_user_wp_pw: wordpress
+  db_name: wordpress
+port_var:
+  service_port: "{{ service_port }}"
