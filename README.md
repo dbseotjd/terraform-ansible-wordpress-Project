@@ -81,6 +81,7 @@ cat variable.tf # 포트값을 변경하면 보안그룹에도 적용되어 서�
 ``` 
 
 * 생성되는 AWS 리소스 
+
 aws_security_group # ssh 접속, 서비스 포트 오픈등을 위한 보안그룹 생성           
 
 aws_key_pair # ssh 접속을 위한 인스턴스에 키제공             
@@ -143,6 +144,7 @@ cat roles/wordpress/vars/main.yaml # group_vars 의 변수들을 이중참조
 └── variable.tf
 ```
 * 생성되는 AWS 리소스           
+
 aws_security_group  # RDS 3306 포트로 접근을 위한 보안그룹, 인스턴스 -> RDS로의 접근을 위해 3306 포트를 허용하는 보안그룹 생성
 
 aws_key_pair # ssh 접속을 위한 키페어
