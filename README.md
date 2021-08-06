@@ -84,7 +84,7 @@ cat variable.tf # 포트값을 변경하면 보안그룹에도 적용되어 서�
 * 생성되는 AWS 리소스 
 aws_security_group      
 
-aws_key_pair
+aws_key_pair          
 
 aws_instance
 
