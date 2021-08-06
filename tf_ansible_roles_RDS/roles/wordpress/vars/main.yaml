@@ -1,0 +1,11 @@
+wp:
+  wp_sampleconf_php: /var/www/html/wordpress/wp-config-sample.php
+  wp_conf_php: /var/www/html/wordpress/wp-config.php
+  version: 5.8
+db:
+  db_host: "{{ db_host }}"
+  db_user_wp: "{{ db_user }}"
+  db_user_wp_pw: "{{ db_pw }}"
+  db_name: "{{ db_name }}"
+port_var:
+  service_port: "{{ service_port }}"

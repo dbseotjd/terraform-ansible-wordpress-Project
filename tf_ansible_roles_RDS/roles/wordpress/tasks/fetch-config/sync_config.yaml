@@ -1,0 +1,17 @@
+- name: sync
+  async_status:
+    jid: "{{ down_result.ansible_job_id }}"
+  register: job_result
+  until: job_result.finished
+  retries: 100
+  delay: 5
+
+- name: UnArchiving wordpress file
+  unarchive:
+    src: "/home/ubuntu/wordpress-{{ wp['version'] }}.tar.gz"
+    dest: /var/www/html/
+    remote_src: yes
+- name: Copy & Setting wp-config.ph with template
+  template:
+    src: wp-config.php.j2
+    dest: /var/www/html/wordpress/wp-config.php

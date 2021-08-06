@@ -1,0 +1,21 @@
+- name: Download wordpress
+  import_tasks: fetch-config/get_wp.yaml
+
+- name: Install Package apache2 Debian
+  import_tasks: install-confchange/install_deb.yaml
+  when: ansible_facts['os_family'] == "Debian"
+
+- name: Install Package httpd, php RedHat
+  import_tasks: install-confchange/install_red.yaml
+  when: ansible_facts['os_family'] == "RedHat"
+
+- name: sync
+  import_tasks: fetch-config/sync_config.yaml
+
+- name: Change Service port in Debian
+  import_tasks: install-confchange/changePort_deb.yaml
+  when: ansible_facts['os_family'] == "Debian"
+
+- name: Change Service port in Redhat
+  import_tasks: install-confchange/changePort_red.yaml
+  when: ansible_facts['os_family'] == "RedHat"

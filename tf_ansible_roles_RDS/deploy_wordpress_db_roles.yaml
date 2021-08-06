@@ -1,0 +1,10 @@
+- name: Configure wordpress service
+  hosts: "{{ groups['ungrouped'][0] }}"
+  roles:
+    - wordpress
+  post_tasks:
+    - name: Check Web Status using uri
+      uri:
+        url: "http://{{ groups['ungrouped'][0] }}:{{ service_port }}/wordpress"
+        status_code: 200
+        return_content: yes

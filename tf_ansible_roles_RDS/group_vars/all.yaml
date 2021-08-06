@@ -1,0 +1,12 @@
+private_ip: 172.31.32.78
+service_port: 8080
+service_port: 8080
+db_pw: test1234
+db_name: wordpress
+db_host: terraform-20210806163304028100000001.cg3qmfpgandp.ap-northeast-2.rds.amazonaws.com:3306
+db_user: admin
+service_port: 8080
+db_pw: test1234
+db_name: wordpress
+db_host: terraform-20210806163304028100000001.cg3qmfpgandp.ap-northeast-2.rds.amazonaws.com:3306
+db_user: admin

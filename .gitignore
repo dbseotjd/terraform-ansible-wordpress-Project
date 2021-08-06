@@ -4,3 +4,9 @@ tf_ansible_roles_one_instance/my_sshkey
 tf_ansible_roles_one_instance/my_sshkey.pub
 tf_ansible_roles_one_instance/terraform.tfstate
 tf_ansible_roles_one_instance/terraform.tfstate.backup
+tf_ansible_roles_RDS/.terraform.lock.hcl
+tf_ansible_roles_RDS/.terraform
+tf_ansible_roles_RDS/my_sshkey
+tf_ansible_roles_RDS/my_sshkey.pub
+tf_ansible_roles_RDS/terraform.tfstate
+tf_ansible_roles_RDS/terraform.tfstate.backup

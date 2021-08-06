@@ -1,0 +1,7 @@
+- name: Fetch wordpress File
+  get_url:
+    url: "https://wordpress.org/wordpress-{{ wp['version'] }}.tar.gz"
+    dest: "/home/ubuntu/wordpress-{{ wp['version'] }}.tar.gz"
+  async: 120
+  poll: 0
+  register: down_result

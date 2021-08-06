@@ -1,0 +1,12 @@
+- name: Install Package httpd for Redhat
+  yum:
+    update_cache: yes
+    name: httpd
+- name: Install Package php redhat
+  yum:
+    name: php, php-mysql, php-gd, php-mbstring
+- name: Check Httpd Service
+  service:
+    name: httpd
+    state: started
+    enabled: yes
