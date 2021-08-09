@@ -3,7 +3,24 @@
 Ansible 에서의 playbook을 통한 배포 다음으로 그것을 인프라에 적용시키는 terrform을 통한 AWS 인프라 구성관리를 위함            
 
 * requirements :             
-terraform 설치
+1. ansible 설치        
+provisioner의 local-exec 기능을 사용하여 진행하므로, 로컬에서는 ansible 구동환경이 필요하다.       
+```
+sudo apt update
+sudo apt install -y software-properties-common
+sudo apt-add-repository -y -u ppa:ansible/ansible
+sudo apt install -y ansible
+
+#쉘 자동완성
+sudo apt install -y python3-argcomplete
+sudo activate-gloval-python-argcomplete3
+
+#문법 체크
+sudo apt install -y ansibel-lint
+exec bash
+```
+
+2. terraform 설치
 ```
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 
