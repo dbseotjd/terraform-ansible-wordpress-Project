@@ -168,6 +168,6 @@ aws_key_pair # ssh 접속을 위한 키페어
 
 aws_instance # ansible playbook을 통해 워드프레스가 배포될 인스턴스 생성         
 
-aws_db_instance # --> RDS 워드프레스의 데이터베이스 역할을 하는 RDS 생성(mysql engine)       
+aws_db_instance # --> RDS 워드프레스의 데이터베이스 역할을 하는 RDS 생성(mysql En in )       
 
 
